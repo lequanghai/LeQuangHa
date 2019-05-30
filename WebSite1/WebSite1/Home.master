@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<%@ Register src="LeftMenu.ascx" tagname="LeftMenu" tagprefix="uc1" %>
+<%@ Register src="RightMenuControl.ascx" tagname="RightMenuControl" tagprefix="uc2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 209px;
+        }
+        .auto-style2 {
+            width: 502px;
+        }
+        .auto-style7 {
+            width: 639px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style1" rowspan="3">
+                    <uc1:LeftMenu ID="LeftMenu1" runat="server" />
+                </td>
+                <td class="auto-style7">&nbsp;</td>
+                <td rowspan="3">
+                    <uc2:RightMenuControl ID="RightMenuControl1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7">&nbsp;</td>
+            </tr>
+        </table>
+       
+    </div>
+    </form>
+</body>
+</html>
